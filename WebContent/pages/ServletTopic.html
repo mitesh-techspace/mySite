@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>You are Your Tutor</title>
+
+<style>
+#menu {
+    width: 1200px;
+    height: 50px;
+    font-size: 25px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 3px 2px 3px #333333;
+    background-color: #8AD9FF;
+        border-radius: 8px;
+}
+ 
+#menu ul {
+    height: auto;
+    padding: 8px 0px;
+    margin: 0px;
+}
+ 
+#menu li {
+display: inline;
+padding: 40px;
+}
+ 
+#menu a {
+    text-decoration: none;
+    color: #00F;
+    color:blueviolet;
+    padding: 20px 20px 20px 20px;
+}
+ 
+#menu a:hover {
+    color: #F90;
+    background-color: #FFF;
+}
+    
+    body{
+        background-color:cornsilk;
+    }
+   
+    #heading{
+        margin-left: 50px;
+    }
+    
+    #description{
+        margin-left: 30px;
+        text-indent: 20px;
+        margin-right: 80px;
+    } 
+    
+    #points{
+        margin-left: 50px;
+    }
+    
+    #image{
+        margin-left: 30px;
+    }
+    
+    #subdescription{
+        margin-left: 70px;
+        margin-right: 40px;
+    }
+    
+  </style>
+ 
+
+</head>
+<body>
+
+<div id="menu">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="Test.html">Tests</a></li>
+<li><a href="aboutus.html">Interview Questions</a></li>
+<li><a href="contactus.html">Contact Me</a></li>
+</ul>
+</div>
+<div align=center>
+    <h1>The Servlet Tutorial</h1>
+</div>
+    <div id="heading"><h3>WebServer </h3>
+</div>
+    
+    <div id="description">
+        To host a website with only static pages webserver is needed.The webserver parses the request from client/browser and it navigates to the requested page. The webserver is configured to parse specific type of request. Most used request or protocol type is HTTP.<br><br>
+    </div>
+    
+    <div id="image">
+    <img src="drawisland-3.png" alt="webserver pic" style="align-content:center width:325px;height:325px;">
+    </div>
+    
+    
+  <div id="description">
+    Webserver is also called HTTP server since it uses HTTP to communicate with client(web browser). The HTTP request consist of following :<br>
+  </div>
+    <div id="points">
+        <ul>
+        <li>Method-URI-Protocol</li>
+        <li>Request headers</li>
+        <li>Entity Body</li>
+        </ul>
+
+    </div>
+    <div id="description">
+    Webserver uses two important classes:
+    </div>
+     <div id="points">
+    <ul>
+        <li>java.net.Socket</li>
+        <li>java.net.ServerSocket</li>
+    </ul>
+        </div>
+    <div id="subdescription">
+    The above classes keep checking on a port if a request has come on that port using socket of networking
+    </div>
+      <br>
+    <br>
+    
+    </div>
+    <div id="heading"><h3>Application Server </h3>
+</div>
+    <div id="description">
+        To apply business logic for a request, the call need to be transferred to application server from webserver. Application server is a software which installs J2E specifications. an application server refers to a framework (servlet container, EJB container, JSP engine, MQ container, etc.) for handling Web applications. The app server may also interact with database as per requirement. Application container also contains enterprise tools. <br><br>
+    </div>
+    
+    <div id="image">
+    <img src="drawisland-4.png" alt="webserver pic" style="align-content:center width:325px;height:325px;">
+    </div>
+    <div>
+    <div id="heading"><h3>Servlet Container </h3>
+</div>
+<div id="description">
+A servlet is nothing but Java code that runs in a container. It generates HTML & other contents that get displayed in the web page that we see. It is purely coded in Java, so the benefits and restrictions of all regular Java classes apply here too.
+    <p>
+    The servlet container is an extension of a Web server in the same way CGI, ASP, and PHP are. A servlet functions just like them, but the language in which it is written is Java. That's the main difference. The servlet doesn't talk to the client directly. The Web server functions as the intermediary that does it for the servlet. In a chain of processes, the client sends a request to the Web server, which hands it to the container, which hands it to the servlet. The Servlet processes the request and generates a response. The response starts from the servlet and goes to the container and then to the Web server and back to the client. Of course there are several other steps that happen too but this is just the introduction so this much would suffice I believe. 
+    </p>
+</div>
+<div>
+    <div id="heading"><h3>How Servelet Works </h3>
+</div>
+    
+    <div id="image">
+    <img src="drawisland-6.png" alt="webserver pic" style="align-content:center width:325px;height:325px;">
+    </div>
+    
+<div id="description">
+    It is important to learn how servlet works for understanding the servlet well. Here, we are going to get the internal detail about the first servlet program.<br>
+
+The server checks if the servlet is requested for the first time.<br>
+
+<b>If yes,</b> web container does the following tasks:<br>
+    <ul>
+    <li>loads the servlet class.</li>
+    <li>instantiates the servlet class.</li>
+    <li>calls the init method passing the ServletConfig object</li>
+    </ul>
+
+<b>else</b>
+
+calls the service method passing request and response objects
+The web container calls the destroy method when it needs to remove the servlet such as at time of stopping server or undeploying the project.
+    <p>
+    The protected service method checks the type of request, if request type is get, it calls doGet method, if request type is post, it calls doPost method, so on
+    </p>
+    </div>
+Servlet Topics To Revise:<br>
+1.Servlet Config<br>
+2.Servlet Context<br>
+3.Attributes In Servlet<br>
+4.Session Tracking<br>
+5.Servlet Filter<br>
+6.CRUD operations in Servlet
+</body>
+</html>
